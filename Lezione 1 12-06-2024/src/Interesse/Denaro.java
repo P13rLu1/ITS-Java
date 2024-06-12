@@ -1,8 +1,8 @@
 package Interesse;
 
 public class Denaro {
-    private double Capitale;
-    private double Interesse;
+    private final double Capitale;
+    private final double Interesse;
 
     public Denaro(double capitale, double interesse) {
         Capitale = capitale;

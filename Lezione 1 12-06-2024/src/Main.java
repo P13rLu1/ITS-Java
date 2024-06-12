@@ -45,7 +45,7 @@ public class Main {
         int anni = 3;
         for (int i = 1; i <= anni; i++) {
             double sommaTotale = capitale + new Denaro(capitale, interesse).getInteresseAnnuo();
-            System.out.printf("La somma dopo anni %d è %.2f\n", i, sommaTotale);
+            System.out.println("La somma dopo anni " + i + " é di: " + sommaTotale);
             capitale = sommaTotale;
         }
     }
