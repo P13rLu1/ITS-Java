@@ -1,15 +1,26 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
         System.out.println("Hello and welcome!");
 
         for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
             System.out.println("i = " + i);
         }
+
+        String ma = "Ma";
+        double uno = 1.23;
+        String rio = ma + "rio";
+        System.out.println(rio);
+        rio += " Mario";
+        System.out.println(rio);
+
+        System.out.printf("Hello %f\n", uno);
+
+        Rettangolo rettangolo = new Rettangolo(3, 7);
+//        System.out.printf("\nRettangolo\nArea: %.2f\nPerimetro %.2f\n", rettangolo.getArea(), rettangolo.getPerimetro());
+        System.out.println("\nRettangolo:\n" + rettangolo);
+
+        Triangolo triangolo = new Triangolo(3, 7);
+//        System.out.printf("\nTriangolo\nArea: %.2f\nPerimetro %.2f\n", triangolo.getArea(), triangolo.getPerimetro());
+        System.out.println("\nTriangolo:\n" + triangolo);
     }
 }
