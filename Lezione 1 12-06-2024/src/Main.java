@@ -9,6 +9,8 @@ public class Main {
         CalcoloPoligoni();
 
         CalcoloInteresse();
+
+        VedereStagioni();
     }
 
     public static void ProvaStringhe() {
@@ -45,8 +47,64 @@ public class Main {
         int anni = 3;
         for (int i = 1; i <= anni; i++) {
             double sommaTotale = capitale + new Denaro(capitale, interesse).getInteresseAnnuo();
-            System.out.println("La somma dopo anni " + i + " é di: " + sommaTotale);
+            System.out.printf("la somma dopo anni %d é di: %.1f\n", i, sommaTotale);
             capitale = sommaTotale;
+        }
+    }
+
+    public static void VedereStagioni() {
+        int numeroMese = 3;
+        switch (numeroMese) {
+            case 1:
+            case 2:
+                System.out.println("Inverno");
+                break;
+            case 3:
+                System.out.println("Inverno o Primavera");
+                break;
+            case 4:
+            case 5:
+                System.out.println("Primavera");
+                break;
+            case 6:
+                System.out.println("Primavera o Estate");
+                break;
+            case 7:
+            case 8:
+                System.out.println("Estate");
+                break;
+            case 9:
+                System.out.println("Estate o Autunno");
+                break;
+            case 10:
+            case 11:
+                System.out.println("Autunno");
+                break;
+            case 12:
+                System.out.println("Autunno o Inverno");
+                break;
+            default:
+                System.out.println("Mese non valido");
+        }
+
+        if (numeroMese == 3) {
+            System.out.println("Inverno o Primavera");
+        } else if (numeroMese == 4 || numeroMese == 5) {
+            System.out.println("Primavera");
+        } else if (numeroMese == 6) {
+            System.out.println("Primavera o Estate");
+        } else if (numeroMese == 7 || numeroMese == 8) {
+            System.out.println("Estate");
+        } else if (numeroMese == 9) {
+            System.out.println("Estate o Autunno");
+        } else if (numeroMese == 10 || numeroMese == 11) {
+            System.out.println("Autunno");
+        } else if (numeroMese == 12) {
+            System.out.println("Autunno o Inverno");
+        } else if (numeroMese == 1 || numeroMese == 2) {
+            System.out.println("Inverno");
+        } else {
+            System.out.println("Mese non valido");
         }
     }
 }
