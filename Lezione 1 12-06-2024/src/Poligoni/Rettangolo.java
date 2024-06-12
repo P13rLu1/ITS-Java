@@ -1,3 +1,5 @@
+package Poligoni;
+
 public class Rettangolo {
 
     private final double Base;
