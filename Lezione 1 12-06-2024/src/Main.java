@@ -1,6 +1,11 @@
 import Poligoni.Rettangolo;
 import Poligoni.Triangolo;
 import Interesse.Denaro;
+import Calendario.Calendario2024;
+
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
@@ -16,6 +21,8 @@ public class Main {
         metodiArray();
 
         fibonacci();
+
+        calendario2024();
 
         System.out.println("\nFine del programma");
     }
@@ -66,7 +73,7 @@ public class Main {
     public static void vedereStagioni() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Inserire il numero del mese: ");
-        int numeroMese= scanner.nextInt();
+        int numeroMese = scanner.nextInt();
 
         // Switch per vedere le stagioni
         switch (numeroMese) {
@@ -181,7 +188,7 @@ public class Main {
         }
     }
 
-    // Metodo per calcolare la serie di Fibonacci
+    // Metodo per calcolare la successione di Fibonacci
     public static void fibonacci() {
         int n = 10;
         int[] fibonacci = new int[n];
@@ -192,8 +199,22 @@ public class Main {
         }
 
         System.out.print("\nSerie di Fibonacci: ");
-        for (int j : fibonacci) {
-            System.out.print(j + " ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(fibonacci[i] + " ");
         }
+    }
+
+    // Metodo per stampare il giorno corrente
+    public static void calendario2024() {
+        //giorno corrente
+        int giornoCorrente = 13;
+        int meseCorrente = 6;
+
+        Calendario2024 calendario = new Calendario2024();
+        System.out.println("\nOggi é: " + calendario.getGiorno(meseCorrente, giornoCorrente));
+
+        Date date = new Date();
+        DateFormat df = new SimpleDateFormat("EEEE");
+        System.out.println("Oggi é: " + df.format(date));
     }
 }
