@@ -14,6 +14,10 @@ public class Main {
         vedereStagioni();
 
         metodiArray();
+
+        fibonacci();
+
+        System.out.println("\nFine del programma");
     }
 
     // Metodo per provare le stringhe
@@ -158,6 +162,7 @@ public class Main {
             }
         }
 
+        //stampa l'array ordinato in modo crescente
         System.out.print("Array ordinato: ");
         for (int j : array) {
             System.out.print(j + " ");
@@ -169,8 +174,25 @@ public class Main {
             arrayDecrescente[i] = array[array.length - 1 - i];
         }
 
+        //stampa l'array ordinato in modo decrescente
         System.out.print("\nArray decrescente: ");
         for (int j : arrayDecrescente) {
+            System.out.print(j + " ");
+        }
+    }
+
+    // Metodo per calcolare la serie di Fibonacci
+    public static void fibonacci() {
+        int n = 10;
+        int[] fibonacci = new int[n];
+        fibonacci[0] = 0;
+        fibonacci[1] = 1;
+        for (int i = 2; i < n; i++) {
+            fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+        }
+
+        System.out.print("\nSerie di Fibonacci: ");
+        for (int j : fibonacci) {
             System.out.print(j + " ");
         }
     }
