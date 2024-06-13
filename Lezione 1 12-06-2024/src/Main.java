@@ -1,19 +1,23 @@
 import Poligoni.Rettangolo;
 import Poligoni.Triangolo;
 import Interesse.Denaro;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        ProvaStringhe();
+        provaStringhe();
 
-        CalcoloPoligoni();
+        calcoloPoligoni();
 
-        CalcoloInteresse();
+        calcoloInteresse();
 
-        VedereStagioni();
+        vedereStagioni();
+
+        metodiArray();
     }
 
-    public static void ProvaStringhe() {
+    // Metodo per provare le stringhe
+    public static void provaStringhe() {
         System.out.println("Hello and welcome!");
 
         for (int i = 1; i <= 5; i++) {
@@ -30,7 +34,8 @@ public class Main {
         System.out.printf("Hello %f\n", uno);
     }
 
-    public static void CalcoloPoligoni() {
+    // Metodo per calcolare le aree e i perimetri di Poligoni.Rettangolo e Poligoni.Triangolo
+    public static void calcoloPoligoni() {
         Rettangolo rettangolo = new Rettangolo(3, 7);
 //        System.out.printf("\nRettangolo\nArea: %.2f\nPerimetro %.2f\n", rettangolo.getArea(), rettangolo.getPerimetro());
         System.out.println("\nPoligoni.Rettangolo:\n" + rettangolo);
@@ -40,20 +45,26 @@ public class Main {
         System.out.println("\nPoligoni.Triangolo:\n" + triangolo);
     }
 
-    public static void CalcoloInteresse() {
+    // Metodo per calcolare l'interesse del Denaro
+    public static void calcoloInteresse() {
         System.out.println("\nInteresse del Denaro:");
-        double capitale = 1000;
-        double interesse = 0.1;
+        Denaro denaro = new Denaro(1000, 0.09);
         int anni = 3;
-        for (int i = 1; i <= anni; i++) {
-            double sommaTotale = capitale + new Denaro(capitale, interesse).getInteresseAnnuo();
-            System.out.printf("la somma dopo anni %d é di: %.1f\n", i, sommaTotale);
-            capitale = sommaTotale;
+        for (int i = 1; i <= anni; i++) { // Calcolo Interesse Annuo per <anni> anni
+            denaro.getInteresseAnnuo();
+            System.out.printf("Il Saldo dopo Anni %d é di: %.1f€ con saldo %.2f\n", i, denaro.dammiSomma(), denaro.getInteresse());
+
+            denaro.setInteresse(denaro.getInteresse() + 0.01);
         }
     }
 
-    public static void VedereStagioni() {
-        int numeroMese = 3;
+    // Metodo per vedere le stagioni
+    public static void vedereStagioni() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Inserire il numero del mese: ");
+        int numeroMese= scanner.nextInt();
+
+        // Switch per vedere le stagioni
         switch (numeroMese) {
             case 1:
             case 2:
@@ -87,6 +98,20 @@ public class Main {
                 System.out.println("Mese non valido");
         }
 
+        // Switch per vedere le stagioni (Java 12+)
+        switch (numeroMese) {
+            case 1, 2 -> System.out.println("Inverno");
+            case 3 -> System.out.println("Inverno o Primavera");
+            case 4, 5 -> System.out.println("Primavera");
+            case 6 -> System.out.println("Primavera o Estate");
+            case 7, 8 -> System.out.println("Estate");
+            case 9 -> System.out.println("Estate o Autunno");
+            case 10, 11 -> System.out.println("Autunno");
+            case 12 -> System.out.println("Autunno o Inverno");
+            default -> System.out.println("Mese non valido");
+        }
+
+        // If-Else per vedere le stagioni
         if (numeroMese == 3) {
             System.out.println("Inverno o Primavera");
         } else if (numeroMese == 4 || numeroMese == 5) {
@@ -105,6 +130,48 @@ public class Main {
             System.out.println("Inverno");
         } else {
             System.out.println("Mese non valido");
+        }
+    }
+
+    // Metodo per provare gli array
+    public static void metodiArray() {
+        int[] array = {3, 2, 1, 4, 5, 6, 8, 7, 10, 9};
+
+        //trova il massimo
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+
+        System.out.println("Il massimo è: " + max);
+
+        //ordina l'array in modo crescente
+        for (int i = 0; i < array.length - 1; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+
+        System.out.print("Array ordinato: ");
+        for (int j : array) {
+            System.out.print(j + " ");
+        }
+
+        //creare un nuovo array di 10 numeri e riempirlo con i numeri ordinati in modo decrescente
+        int[] arrayDecrescente = new int[10];
+        for (int i = 0; i < array.length; i++) {
+            arrayDecrescente[i] = array[array.length - 1 - i];
+        }
+
+        System.out.print("\nArray decrescente: ");
+        for (int j : arrayDecrescente) {
+            System.out.print(j + " ");
         }
     }
 }
