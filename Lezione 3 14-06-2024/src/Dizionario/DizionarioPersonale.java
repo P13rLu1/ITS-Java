@@ -11,7 +11,7 @@ public class DizionarioPersonale {
         popolaDizionario();
     }
 
-    public void popolaDizionario(){
+    public void popolaDizionario() {
         dizionario.put("cane", "animale domestico");
         dizionario.put("gatto", "animale domestico");
         dizionario.put("cavallo", "animale da corsa");
@@ -24,15 +24,39 @@ public class DizionarioPersonale {
         dizionario.put("mosca", "insetto");
     }
 
+    public Map<String, String> getDizionario() {
+        return dizionario;
+    }
+
+    public void cercaParola(String parola){
+        String significato = dizionario.get(parola);
+        if(significato != null){
+            System.out.println("Il significato di " + parola + " è: " + significato);
+        } else {
+            System.out.println("La parola " + parola + " non è presente nel dizionario.");
+        }
+    }
+
     public void aggiungiParola(String parola, String significato){
         dizionario.put(parola, significato);
+        System.out.println("Parola aggiunta correttamente.");
     }
 
-    public String getSignificato(String parola){
-        return dizionario.get(parola);
+    public void aggiornaParola(String parola, String significato){
+        if(dizionario.containsKey(parola)){
+            dizionario.put(parola, significato);
+            System.out.println("Parola aggiornata correttamente.");
+        } else {
+            System.out.println("La parola " + parola + " non è presente nel dizionario.");
+        }
     }
 
-    public Map<String, String> getDizionario(){
-        return dizionario;
+    public void eliminaParola(String parola){
+        if(dizionario.containsKey(parola)){
+            dizionario.remove(parola);
+            System.out.println("Parola eliminata correttamente.");
+        } else {
+            System.out.println("La parola " + parola + " non è presente nel dizionario.");
+        }
     }
 }
