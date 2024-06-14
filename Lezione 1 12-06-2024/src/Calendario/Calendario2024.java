@@ -1,29 +1,58 @@
 package Calendario;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Calendario2024 {
+    private final int anno;
     int NUMERO_MESI = 12;
-    private final int[] giorniMesi = {31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
-    private final String[][] calendario = new String[12][31];
-    private final String[] giorniSettimana = {"Lunedí", "Martedí", "Mercoledí", "Giovedí", "Venerdí", "Sabato", "Domenica"};
+    private final List<List<String>> calendario = new ArrayList<>();
+    private final List<String> giorniSettimana = List.of("Lunedí", "Martedí", "Mercoledí", "Giovedí", "Venerdí", "Sabato", "Domenica");
     private int giornoSettimana = 0;
 
-    public void riempiCalendario() {
-        for (int i = 0; i < NUMERO_MESI; i++) {
-            for (int j = 0; j < giorniMesi[i]; j++) {
-                calendario[i][j] = giorniSettimana[giornoSettimana];
-                giornoSettimana++;
-                if (giornoSettimana == 7) {
-                    giornoSettimana = 0;
-                }
-            }
-        }
-    }
-
-    public Calendario2024(){
+    public Calendario2024(int anno) {
+        this.anno = anno;
         riempiCalendario();
     }
 
+    private List<Integer> calcolaAnno() {
+        List<Integer> giorniMesi = new ArrayList<>();
+        giorniMesi.add(31);
+        System.out.printf("Anno %d\n", anno);
+        if (anno % 4 == 0 && anno % 100 != 0 || anno % 400 == 0) {
+            giorniMesi.add(29);
+        } else {
+            giorniMesi.add(28);
+        }
+        giorniMesi.add(31);
+        giorniMesi.add(30);
+        giorniMesi.add(31);
+        giorniMesi.add(30);
+        giorniMesi.add(31);
+        giorniMesi.add(31);
+        giorniMesi.add(30);
+        giorniMesi.add(31);
+        giorniMesi.add(30);
+        giorniMesi.add(31);
+        return giorniMesi;
+    }
+
+    public void riempiCalendario() {
+        List<Integer> giorniMesi = calcolaAnno();
+        for (int i = 0; i < NUMERO_MESI; i++) {
+            List<String> giorniDelMese = new ArrayList<>();
+            for (int j = 0; j < giorniMesi.get(i); j++) {
+                giorniDelMese.add(giorniSettimana.get(giornoSettimana));
+                giornoSettimana++;
+                if (giornoSettimana == giorniSettimana.size()) {
+                    giornoSettimana = 0;
+                }
+            }
+            calendario.add(giorniDelMese);
+        }
+    }
+
     public String getGiorno(int mese, int giorno) {
-        return calendario[mese - 1][giorno - 1];
+        return calendario.get(mese - 1).get(giorno - 1);
     }
 }

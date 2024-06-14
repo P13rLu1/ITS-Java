@@ -3,13 +3,13 @@ import Poligoni.Triangolo;
 import Interesse.Denaro;
 import Calendario.Calendario2024;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.Scanner;
 
 public class Main {
+    public static Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
+
         provaStringhe();
 
         calcoloPoligoni();
@@ -71,7 +71,6 @@ public class Main {
 
     // Metodo per vedere le stagioni
     public static void vedereStagioni() {
-        Scanner scanner = new Scanner(System.in);
         System.out.print("Inserire il numero del mese: ");
         int numeroMese = scanner.nextInt();
 
@@ -207,14 +206,13 @@ public class Main {
     // Metodo per stampare il giorno corrente
     public static void calendario2024() {
         //giorno corrente
-        int giornoCorrente = 13;
+        int giornoCorrente = 14;
         int meseCorrente = 6;
 
-        Calendario2024 calendario = new Calendario2024();
-        System.out.println("\nOggi é: " + calendario.getGiorno(meseCorrente, giornoCorrente));
+        System.out.print("\nIn che anno siamo?: ");
+        int anno = scanner.nextInt();
 
-        Date date = new Date();
-        DateFormat df = new SimpleDateFormat("EEEE");
-        System.out.println("Oggi é: " + df.format(date));
+        Calendario2024 calendario = new Calendario2024(anno);
+        System.out.println("\nOggi é: " + calendario.getGiorno(meseCorrente, giornoCorrente));
     }
 }
