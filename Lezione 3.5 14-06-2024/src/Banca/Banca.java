@@ -5,36 +5,28 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class Banca {
+    // HashMap<IBAN, Conto> un iban è associato ad un oggetto conto
     Map<String, Conto> conti = new HashMap<>();
     Scanner scanner = new Scanner(System.in);
 
+    // Menu principale
     public void menuPrincipale() {
         String scelta;
         do {
             System.out.print("1. Crea conto\n2. Visualizza conto\n3. Deposita\n4. Preleva\n5. Esci\nScelta: ");
             scelta = scanner.nextLine();
             switch (scelta) {
-                case "1":
-                    creaConto();
-                    break;
-                case "2":
-                    visualizzaConto();
-                    break;
-                case "3":
-                    deposita();
-                    break;
-                case "4":
-                    preleva();
-                    break;
-                case "5":
-                    System.out.println("Arrivederci!");
-                    break;
-                default:
-                    System.out.println("Scelta non valida");
+                case "1" -> creaConto();
+                case "2" -> visualizzaConto();
+                case "3" -> deposita();
+                case "4" -> preleva();
+                case "5" -> System.out.println("Arrivederci!");
+                default -> System.out.println("Scelta non valida");
             }
         } while (!scelta.equals("5"));
     }
 
+    // Metodo per creare un conto corrente
     private void creaConto() {
         System.out.print("IBAN: ");
         String iban = scanner.nextLine();
@@ -46,6 +38,7 @@ public class Banca {
         }
     }
 
+    // Metodo per visualizzare il saldo di un conto corrente
     private void visualizzaConto() {
         System.out.print("IBAN: ");
         String iban = scanner.nextLine();
@@ -58,6 +51,7 @@ public class Banca {
         }
     }
 
+    // Metodo per depositare denaro in un conto corrente
     private void deposita() {
         System.out.print("IBAN: ");
         String iban = scanner.nextLine();
@@ -72,6 +66,7 @@ public class Banca {
         }
     }
 
+    // Metodo per prelevare denaro da un conto corrente
     private void preleva() {
         System.out.print("IBAN: ");
         String iban = scanner.nextLine();
