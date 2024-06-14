@@ -15,6 +15,21 @@ public class Calendario2024 {
         riempiCalendario();
     }
 
+    public void riempiCalendario() {
+        List<Integer> giorniMesi = calcolaAnno();
+        for (int i = 0; i < NUMERO_MESI; i++) {
+            List<String> giorniDelMese = new ArrayList<>();
+            for (int j = 0; j < giorniMesi.get(i); j++) {
+                giorniDelMese.add(giorniSettimana.get(giornoSettimana));
+                giornoSettimana++;
+                if (giornoSettimana == giorniSettimana.size()) {
+                    giornoSettimana = 0;
+                }
+            }
+            calendario.add(giorniDelMese);
+        }
+    }
+
     private List<Integer> calcolaAnno() {
         List<Integer> giorniMesi = new ArrayList<>();
         giorniMesi.add(31);
@@ -35,21 +50,6 @@ public class Calendario2024 {
         giorniMesi.add(30);
         giorniMesi.add(31);
         return giorniMesi;
-    }
-
-    public void riempiCalendario() {
-        List<Integer> giorniMesi = calcolaAnno();
-        for (int i = 0; i < NUMERO_MESI; i++) {
-            List<String> giorniDelMese = new ArrayList<>();
-            for (int j = 0; j < giorniMesi.get(i); j++) {
-                giorniDelMese.add(giorniSettimana.get(giornoSettimana));
-                giornoSettimana++;
-                if (giornoSettimana == giorniSettimana.size()) {
-                    giornoSettimana = 0;
-                }
-            }
-            calendario.add(giorniDelMese);
-        }
     }
 
     public String getGiorno(int mese, int giorno) {
