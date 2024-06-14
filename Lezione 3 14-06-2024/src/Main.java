@@ -1,31 +1,79 @@
-import java.util.HashMap;
-import java.util.Map;
+import Dizionario.DizionarioPersonale;
+
 import java.util.Scanner;
 
 public class Main {
     public static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        Map<String, String> dizionario = new HashMap<>();
-        dizionario.put("cane", "animale domestico");
-        dizionario.put("gatto", "animale domestico");
-        dizionario.put("cavallo", "animale da corsa");
-        dizionario.put("elefante", "animale selvatico");
-        dizionario.put("tigre", "animale selvatico");
-        dizionario.put("pappagallo", "animale da compagnia");
-        dizionario.put("scoiattolo", "animale selvatico");
-        dizionario.put("formica", "insetto");
-        dizionario.put("ragno", "insetto");
-        dizionario.put("mosca", "insetto");
 
-        //stampa il dizionario
-        System.out.println("Dizionario:");
-        for (Map.Entry<String, String> entry : dizionario.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
+        DizionarioPersonale dizionario = new DizionarioPersonale();
+
+        String scelta = "";
+        while(!scelta.equals("0")){
+            System.out.print("1. Cerca parola\n2. Aggiungi parola\n3. Mostra dizionario\n4. Aggiorna parola\n5. Elimina parola\n0. Esci\nScegli un'opzione: ");
+            scelta = scanner.nextLine();
+            switch(scelta){
+                case "1":
+                    cercaParola(dizionario);
+                    break;
+                case "2":
+                    aggiungiParola(dizionario);
+                    break;
+                case "3":
+                    mostraDizionario(dizionario);
+                    break;
+                case "4":
+                    aggiornaParola(dizionario);
+                    break;
+                case "5":
+                    eliminaParola(dizionario);
+                    break;
+                case "0":
+                    System.out.println("Arrivederci!");
+                    break;
+                default:
+                    System.out.println("Scelta non valida.");
+            }
         }
+    }
 
-        //cerca la definizione di un animale
-        System.out.print("Di quale animale vuoi sapere la definizione?: ");
-        String animale = scanner.nextLine();
-        System.out.println("La definizione di " + animale + " è: " + dizionario.get(animale));
+    public static void cercaParola(DizionarioPersonale dizionario){
+        System.out.print("Inserisci la parola da cercare: ");
+        String parola = scanner.nextLine();
+        String significato = dizionario.getSignificato(parola);
+        if(significato != null){
+            System.out.println("Il significato di " + parola + " è: " + significato);
+        } else {
+            System.out.println("La parola " + parola + " non è presente nel dizionario.");
+        }
+    }
+
+    public static void aggiungiParola(DizionarioPersonale dizionario){
+        System.out.print("Inserisci la parola da aggiungere: ");
+        String parola = scanner.nextLine();
+        System.out.print("Inserisci il significato della parola: ");
+        String significato = scanner.nextLine();
+        dizionario.aggiungiParola(parola, significato);
+    }
+
+    public static void mostraDizionario(DizionarioPersonale dizionario){
+        System.out.println("Dizionario:");
+        for(String parola : dizionario.getDizionario().keySet()){
+            System.out.println(parola + ": " + dizionario.getSignificato(parola));
+        }
+    }
+
+    public static void aggiornaParola(DizionarioPersonale dizionario){
+        System.out.print("Inserisci la parola da aggiornare: ");
+        String parola = scanner.nextLine();
+        System.out.print("Inserisci il nuovo significato della parola: ");
+        String significato = scanner.nextLine();
+        dizionario.aggiungiParola(parola, significato);
+    }
+
+    public static void eliminaParola(DizionarioPersonale dizionario){
+        System.out.print("Inserisci la parola da eliminare: ");
+        String parola = scanner.nextLine();
+        dizionario.getDizionario().remove(parola);
     }
 }
