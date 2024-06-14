@@ -15,7 +15,7 @@ public class Calendario2024 {
         riempiCalendario();
     }
 
-    public void riempiCalendario() {
+    private void riempiCalendario() {
         List<Integer> giorniMesi = calcolaAnno();
         for (int i = 0; i < NUMERO_MESI; i++) {
             List<String> giorniDelMese = new ArrayList<>();
