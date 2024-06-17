@@ -1,65 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eef159e-c70c-4529-b1dc-dded85ffd04a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Lezione 1 12-06-2024/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 1 12-06-2024/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 1 12-06-2024/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 1 12-06-2024/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 1 12-06-2024/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 1 12-06-2024/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 1 12-06-2024/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 1 12-06-2024/HelloWorld.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 1 12-06-2024/src/Calendario/Calendario2024.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 1 12-06-2024/src/Interesse/Denaro.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 1 12-06-2024/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 1 12-06-2024/src/Poligoni/Rettangolo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 1 12-06-2024/src/Poligoni/Triangolo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3 14-06-2024/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3 14-06-2024/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3 14-06-2024/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3 14-06-2024/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3 14-06-2024/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3 14-06-2024/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3 14-06-2024/DizionarioPersonale.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3 14-06-2024/src/Dizionario/DizionarioPersonale.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3 14-06-2024/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3.5 14-06-2024/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3.5 14-06-2024/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3.5 14-06-2024/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3.5 14-06-2024/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3.5 14-06-2024/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3.5 14-06-2024/ButtazzoBanca.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3.5 14-06-2024/src/Banca/Banca.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3.5 14-06-2024/src/Banca/Conto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 3.5 14-06-2024/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4 17-06-2024/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4 17-06-2024/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4 17-06-2024/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4 17-06-2024/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4 17-06-2024/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4 17-06-2024/Lezione 4 17-06-2024.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4 17-06-2024/src/Animalo/Animale.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4 17-06-2024/src/Animalo/Cane.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4 17-06-2024/src/Animalo/CosaMangia.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4 17-06-2024/src/Animalo/Gatto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4 17-06-2024/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4.5 17-06-2024/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4.5 17-06-2024/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4.5 17-06-2024/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4.5 17-06-2024/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4.5 17-06-2024/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4.5 17-06-2024/Lezione 4.5 17-06-2024.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4.5 17-06-2024/src/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4.5 17-06-2024/src/Poligoni/Poligono.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4.5 17-06-2024/src/Poligoni/Quadrato.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4.5 17-06-2024/src/Poligoni/Rettangolo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Lezione 4.5 17-06-2024/src/Poligoni/Triangolo.java" beforeDir="false" />
+    <list default="true" id="8eef159e-c70c-4529-b1dc-dded85ffd04a" name="Changes" comment="changed naming to be more understandable in the future">
+      <change afterPath="$PROJECT_DIR$/src/Banca/Banca.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Banca/ContoCorrente.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Banca/ContoDeposito.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Banca/ContoFiduciario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -90,11 +53,16 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/Pier/Documents/ITS-Java/Lezione 4.5.1 17-06-2024 (Banca Ereditarieta)",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Pier/Documents/ITS-Java/Lezione 4.5.1 17-06-2024/src/Main.java",
     "vue.rearranger.settings.migration": "true"
@@ -118,7 +86,17 @@
       <updated>1718627778311</updated>
       <workItem from="1718627779394" duration="160000" />
       <workItem from="1718627980751" duration="27000" />
+      <workItem from="1718628282659" duration="5702000" />
     </task>
+    <task id="LOCAL-00001" summary="changed naming to be more understandable in the future">
+      <option name="closed" value="true" />
+      <created>1718628390725</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1718628390725</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,5 +104,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="changed naming to be more understandable in the future" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed naming to be more understandable in the future" />
   </component>
 </project>
