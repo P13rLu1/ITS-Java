@@ -47,5 +47,18 @@ public class Main {
         } catch (Exception e) { //se c'è un errore stampa l'errore
             System.out.println("Error: " + e.getMessage());
         }
+
+        try {
+            FileInputStream fis = new FileInputStream(path.toFile()); //questa riga legge il contenuto di persona.txt
+            ObjectInputStream ois = new ObjectInputStream(fis); //questa riga crea un buffer per leggere il contenuto di persona.txt
+
+            Persona p = (Persona) ois.readObject(); //legge il contenuto di persona.txt e lo mette in p
+
+            System.out.println(p.getCognome()); //stampa il contenuto di p
+
+            ois.close(); //chiude il buffer
+        } catch (Exception e) {
+            System.out.println("Error during deserialization: " + e.getMessage());
+        }
     }
 }
