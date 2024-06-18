@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eef159e-c70c-4529-b1dc-dded85ffd04a" name="Changes" comment="changed naming to be more understandable in the future">
-      <change afterPath="$PROJECT_DIR$/src/Banca/Banca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Banca/ContoCorrente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Banca/ContoDeposito.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Banca/ContoFiduciario.java" afterDir="false" />
+    <list default="true" id="8eef159e-c70c-4529-b1dc-dded85ffd04a" name="Changes" comment="made banca with inheritance and ContoDeposito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +53,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Pier/Documents/ITS-Java/Lezione 4.5.1 17-06-2024 (Banca Ereditarieta)",
+    "last_opened_file_path": "C:/Users/Pier/Documents/ITS-Java/Lezione 5 18-06-2024 (Thread)",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -86,7 +81,9 @@
       <updated>1718627778311</updated>
       <workItem from="1718627779394" duration="160000" />
       <workItem from="1718627980751" duration="27000" />
-      <workItem from="1718628282659" duration="5702000" />
+      <workItem from="1718628282659" duration="5938000" />
+      <workItem from="1718694886521" duration="3533000" />
+      <workItem from="1718707441701" duration="340000" />
     </task>
     <task id="LOCAL-00001" summary="changed naming to be more understandable in the future">
       <option name="closed" value="true" />
@@ -96,7 +93,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718628390725</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="made banca with inheritance and ContoDeposito">
+      <option name="closed" value="true" />
+      <created>1718634448985</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1718634448985</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -105,6 +110,7 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="changed naming to be more understandable in the future" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed naming to be more understandable in the future" />
+    <MESSAGE value="made banca with inheritance and ContoDeposito" />
+    <option name="LAST_COMMIT_MESSAGE" value="made banca with inheritance and ContoDeposito" />
   </component>
 </project>
