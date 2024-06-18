@@ -13,4 +13,12 @@ public class Persona implements Serializable {
         this.nome = nome;
         this.cognome = cognome;
     }
+
+    @Override
+    public String toString() {
+        return "Persona{" +
+                "nome='" + nome + '\'' +
+                ", cognome='" + cognome + '\'' +
+                '}';
+    }
 }
