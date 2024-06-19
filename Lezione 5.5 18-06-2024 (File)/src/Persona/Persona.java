@@ -9,8 +9,15 @@ public class Persona implements Serializable {
     private String nome;
     private String cognome;
 
+    public Persona() {
+    }
+
     public Persona(String nome, String cognome) {
         this.nome = nome;
         this.cognome = cognome;
+    }
+
+    public String getCognome() {
+        return nome;
     }
 }
