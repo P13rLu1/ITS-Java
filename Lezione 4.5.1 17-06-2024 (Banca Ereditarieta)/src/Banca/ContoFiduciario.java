@@ -8,6 +8,10 @@ public class ContoFiduciario extends ContoCorrente {
         this.fido = fido;
     }
 
+    public int getFido() {
+        return fido;
+    }
+
     // Metodo per depositare denaro nel conto corrente
     public void deposita(double importo) {
         setSaldo(getSaldo() + importo);

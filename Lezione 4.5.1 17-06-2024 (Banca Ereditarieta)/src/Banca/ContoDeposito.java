@@ -8,6 +8,10 @@ public class ContoDeposito extends ContoCorrente {
         this.tassoInteresse = tassoInteresse;
     }
 
+    public double getTassoInteresse() {
+        return tassoInteresse;
+    }
+
     // Metodo per depositare denaro nel conto corrente
     public void deposita(double importo) {
         setSaldo(getSaldo() + importo);

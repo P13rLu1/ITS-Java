@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8eef159e-c70c-4529-b1dc-dded85ffd04a" name="Changes" comment="made banca with inheritance and ContoDeposito" />
+    <list default="true" id="8eef159e-c70c-4529-b1dc-dded85ffd04a" name="Changes" comment="made banca with inheritance and ContoDeposito">
+      <change beforePath="$PROJECT_DIR$/src/Banca/Banca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banca/Banca.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banca/ContoDeposito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banca/ContoDeposito.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Banca/ContoFiduciario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Banca/ContoFiduciario.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,6 +87,7 @@
       <workItem from="1718694886521" duration="3533000" />
       <workItem from="1718707441701" duration="340000" />
       <workItem from="1718709437314" duration="2422000" />
+      <workItem from="1718787235329" duration="427000" />
     </task>
     <task id="LOCAL-00001" summary="changed naming to be more understandable in the future">
       <option name="closed" value="true" />
