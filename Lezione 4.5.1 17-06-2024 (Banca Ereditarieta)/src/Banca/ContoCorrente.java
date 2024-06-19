@@ -1,6 +1,12 @@
 package Banca;
 
-public abstract class ContoCorrente {
+import java.io.Serial;
+import java.io.Serializable;
+
+public abstract class ContoCorrente implements Serializable {
+    // Attributi della classe Conto
+    @Serial
+    private static final long serialVersionUID = -8633618944934002837L;
     private String iban;
     private double saldo;
 

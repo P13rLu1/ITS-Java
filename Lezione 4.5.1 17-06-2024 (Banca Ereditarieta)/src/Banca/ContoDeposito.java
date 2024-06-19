@@ -25,6 +25,6 @@ public class ContoDeposito extends ContoCorrente {
     // Metodo per calcolare gli interessi maturati
     public void calcolaInteressi() {
         double interessi = getSaldo() * tassoInteresse / 100;
-        setSaldo(getSaldo() + interessi);
+        deposita(interessi);
     }
 }

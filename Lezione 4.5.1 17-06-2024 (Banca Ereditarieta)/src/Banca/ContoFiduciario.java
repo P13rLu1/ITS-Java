@@ -19,7 +19,7 @@ public class ContoFiduciario extends ContoCorrente {
 
     // Metodo per prelevare denaro dal conto corrente
     public void preleva(double importo) {
-        if (getSaldo() - importo < -fido) {
+        if (importo > this.getSaldo() + fido) {
             System.out.println("Fido insufficiente");
         } else {
             setSaldo(getSaldo() - importo);
