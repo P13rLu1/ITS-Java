@@ -47,5 +47,17 @@ public class Main {
         } catch (Exception e) { //se c'è un errore stampa l'errore
             System.out.println("Error: " + e.getMessage());
         }
+
+        try {
+            FileInputStream fis = new FileInputStream(path.toFile()); //questa riga legge il file persona.txt
+
+            ObjectInputStream ois = new ObjectInputStream(fis); //questa riga crea un buffer per leggere da persona.txt
+
+            Persona persona2 = (Persona) ois.readObject(); //legge da persona.txt l'oggetto persona
+
+            System.out.println(persona2); //stampa l'oggetto persona
+        } catch (Exception e) { //se c'è un errore stampa l'errore
+            System.out.println("Error: " + e.getMessage());
+        }
     }
 }
