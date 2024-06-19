@@ -55,7 +55,9 @@ public class Main {
 
             Persona p = (Persona) ois.readObject(); //legge da persona.txt l'oggetto persona
 
-            System.out.println(p.getCognome()); //stampa l'oggetto persona
+            System.out.println(p.getCognome());//stampa l'oggetto persona
+
+            ois.close(); //chiude il buffer
         } catch (Exception e) { //se c'è un errore stampa l'errore
             System.out.println("Error: " + e.getMessage());
         }
