@@ -137,11 +137,10 @@ public class Biblioteca {
     // funzione per rimuovere un prestito
     public void rimuoviPrestito(String isbn) {
         try {
-            prestiti.removeIf(prestito -> prestito.getISBN().equals(isbn));
-
             if (libri.containsKey(isbn)) {
                 libri.get(isbn).setStato(Stato.DISPONIBILE);
             }
+            prestiti.removeIf(prestito -> prestito.getISBN().equals(isbn));
             System.out.println("Prestito rimosso");
         } catch (IllegalArgumentException e) {
             System.out.println("Errore: " + e.getMessage());
@@ -155,6 +154,12 @@ public class Biblioteca {
                 System.out.println("Libro prenotato non si sa quando sarà disponibile");
             } else if (libri.get(isbn).getStato().equals(Stato.IN_PRESTITO)) {
                 System.out.println("Libro in prestito");
+                for (Prestito prestito : prestiti) {
+                    if (prestito.getISBN().equals(isbn)) {
+                        System.out.println("Data inizio prestito: " + prestito.getDataInizio());
+                        System.out.println("Data fine prestito: " + prestito.getDataFine());
+                    }
+                }
             } else if (libri.get(isbn).getStato().equals(Stato.DISPONIBILE)) {
                 System.out.println("Libro disponibile");
             }

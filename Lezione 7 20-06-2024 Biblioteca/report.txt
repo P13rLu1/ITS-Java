@@ -1,0 +1,6 @@
+Matricola: 122, ISBN: 124, Data inizio: null, Data fine: null
+Matricola: 123, ISBN: 124, Data inizio: 2024-06-20, Data fine: 2024-07-20
+Matricola: 122, ISBN: 124, Data inizio: null, Data fine: null
+Matricola: 123, ISBN: 124, Data inizio: 2024-06-20, Data fine: 2024-07-20
+Matricola: 122, ISBN: 124, Data inizio: null, Data fine: null
+Matricola: 123, ISBN: 124, Data inizio: 2024-06-20, Data fine: 2024-07-20
