@@ -63,7 +63,7 @@ public class GestoreRubrica {
         for (Contatto contatto : contatti) {
 
             if (contatto.getNumero().equals(numeroDaCercare)) {
-                System.out.println("Ho trovato : \n " + contatto.toString());
+                System.out.println("Ho trovato : \n " + contatto);
             }
         }
 

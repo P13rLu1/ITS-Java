@@ -1,13 +1,14 @@
 package Rubrica;
 
+import java.io.Serial;
 import java.io.Serializable;
 
-public class Contatto implements Comparable <Contatto>, Serializable  {
-
-
+public class Contatto implements Comparable<Contatto>, Serializable {
     private String nome;
     private String cognome;
     private String numero;
+    @Serial
+    private static final long serialVersionUID = 333864447031088624L;
 
     public Contatto(String nome, String cognome, String numero) {
 
@@ -48,7 +49,7 @@ public class Contatto implements Comparable <Contatto>, Serializable  {
 
     @Override
     public String toString() {
-        return  getNome() + " " + getCognome() + ": " + getNumero() ;
+        return getNome() + " " + getCognome() + ": " + getNumero();
     }
 
 
@@ -56,7 +57,6 @@ public class Contatto implements Comparable <Contatto>, Serializable  {
     public int compareTo(Contatto contattoComparato) {
         return this.cognome.compareTo(contattoComparato.getCognome());
     }
-
 
 
 }
