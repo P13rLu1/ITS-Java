@@ -3,7 +3,7 @@ package Persone;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class Persona {
+public class Persona{
     private String nome;
     private String cognome;
     private LocalDate dataDiNascita;
